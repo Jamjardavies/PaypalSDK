@@ -1,4 +1,5 @@
 ﻿using System;
+using RestSharp;
 
 namespace Paypal.Sync
 {
@@ -8,7 +9,6 @@ namespace Paypal.Sync
             : base("/v1/reporting/transactions", Method.GET)
         {
             AddQueryParameter("page_size", "500");
-            //AddQueryParameter("transaction_type", "T0000");
         }
 
         public SearchGetResults StartDate(DateTime date)
