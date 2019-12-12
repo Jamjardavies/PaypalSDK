@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paypal", "Paypal\Paypal.csproj", "{7FD82C65-378D-4E72-B4A0-3D051B5EFA2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPaypal", "TestPaypal\TestPaypal.csproj", "{43D44C01-33E2-4875-958F-5D162692E0EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FD82C65-378D-4E72-B4A0-3D051B5EFA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD82C65-378D-4E72-B4A0-3D051B5EFA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD82C65-378D-4E72-B4A0-3D051B5EFA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD82C65-378D-4E72-B4A0-3D051B5EFA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D44C01-33E2-4875-958F-5D162692E0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D44C01-33E2-4875-958F-5D162692E0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D44C01-33E2-4875-958F-5D162692E0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D44C01-33E2-4875-958F-5D162692E0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
