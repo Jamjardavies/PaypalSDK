@@ -1,21 +1,15 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace PaypalTest
 {
     public partial class App : Application
     {
-        public App()
-        {
-            InitializeComponent();
-
-            MainPage = new MainPage();
-        }
-
         protected override void OnStart()
         {
-            // Handle when your app starts
+            base.OnStart();
+
+            MainPage = new MainPage();
+            InitializeComponent();
         }
 
         protected override void OnSleep()

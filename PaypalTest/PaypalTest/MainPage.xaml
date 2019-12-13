@@ -1,7 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="PaypalTest.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <ListView ItemsSource="{Binding Details.TransactionDetails}" VerticalOptions="FillAndExpand" RowHeight="180">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="0" VerticalOptions="FillAndExpand" Margin="0,0,0,10">
+                            <Label Text="{Binding TransactionInfo.TransactionInitiationDateTime, StringFormat=d MMM yyyy - HH:mm}" />
+                            <Label Text="{Binding PayerInfo.PayerName.AlternateFullName}" />
+                            <Label Text="{Binding PayerInfo.EmailAddress}" />
+                            <Label Text="{Binding ShippingInfo.Address}" />
+                            <Label Text="{Binding CartInfo.ItemDetails[0].ItemName}" />
+                            <Label Text="{Binding TransactionInfo.TransactionNote}" />
+                            <Label Text="{Binding TransactionInfo.TransactionAmount.Value}" />
+
+                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                <Label Text="Fee" Margin="0,0,4,0"/>
+                                <Label Text="{Binding TransactionInfo.FeeAmount.Value}" Margin="0,0,10,0" />
+                                <Label Text="Postage" Margin="0,0,4,0" />
+                                <Label Text="{Binding CartInfo.ItemDetails[0].BasicShippingAmount.Value}" Margin="0,0,10,0" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
